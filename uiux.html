@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*page*/
+        html {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /*text*/
+        div.photography {
+            padding-left: 10px;
+        }
+
+        /* The grid: Four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .column img:hover {
+            opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container */
+        .container {
+            position: relative;
+            display: none;
+            border: 1px solid gray;
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+            color: gray;
+        }
+
+        /* Closable button inside the expanded image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        /*navbar*/
+        .nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            padding-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .nav li {
+            display: inline;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: #3c153b;
+            margin-top: 25px;
+        }
+
+        nav .active {
+            color: #db2b39;
+        }
+
+        hr {
+            width: 50%;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<div id="navbar">
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="TabbedImageGallery.html">Photography</a></li>
+            <li><a href="TypographyTabbed.html">Typography</a></li>
+            <li><a href="webdesign.html">Web Design</a></li>
+            <li><a class="active" href="uiux.html">UI/ UX</a></li>
+
+        </ul>
+        <hr>
+    </nav>
+</div>
+
+<body>
+
+    <div class="photography">
+        <h2>UI/ UX</h2>
+        <p>The prototypes below are interactive. They have been created using Adobe Illustrator and Adobe XD or Figma. </p>
+    </div>
+
+    <!-- The four columns -->
+    <div class="row">
+
+       
+
+        <iframe src="https://xd.adobe.com/embed/c29c784b-f577-4a6b-aafc-893713f99bdb-97cf/?fullscreen" style="border:0px #ffffff none;" 
+        name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="800px" allowfullscreen></iframe>
+
+        <br><br>
+                  
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1600" height="900" 
+        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FblaglA8m0gcyBpGAENuPxu%2F2020-Dating-App-
+        Interactive-Mockup%3Fnode-id%3D16%253A369%26scaling%3Dscale-down" allowfullscreen></iframe>
+
+        <iframe width="800" height="600" src="https://xd.adobe.com/embed/75f6b2d3-250d-4a5b-9929-2c16e1456175-20a5/?fullscreen" frameborder="0" allowfullscreen></iframe>
+
+    <br>
+    
+
+ </body>
+
+</html>
+

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*page*/
+        html {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /*text*/
+        div.photography {
+            padding-left: 10px;
+        }
+
+        /* The grid: Four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .column img:hover {
+            opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container */
+        .container {
+            position: relative;
+            display: none;
+            border: 1px solid gray;
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            text-align: center;
+            color: white;
+            background-color: dimgray;
+            font-size: 20px;
+            margin-top: -5px;
+            margin-bottom: 5px;
+            padding-top: 10px;
+            height: 40px;
+        }
+
+        /* Closable button inside the expanded image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        /*navbar*/
+        .nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            padding-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .nav li {
+            display: inline;
+        }
+
+        .nav a {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: #3c153b;
+            margin-top: 25px;
+        }
+
+        nav .active {
+            color: #db2b39;
+        }
+
+        hr {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<div id="navbar">
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="TabbedImageGallery.html">Photography</a></li>
+            <li><a href="TypographyTabbed.html">Typography</a></li>
+            <li><a class="active" href="webdesign.html">Web Design</a></li>
+            <li><a href="uiux.html">UI/ UX</a></li>
+        </ul>
+        <hr>
+    </nav>
+</div>
+
+<body>
+
+    <div class="photography">
+        <h2>Web Design</h2>
+        <p>The mockups below have been created using Adobe Illustrator and Photoshop. Since the mockups show what the websites look like, the websites themselves 
+            have not been included. However, the actual websites have been creeated using HTML5, CSS3, and Javascript. I also have experience using JQuery and Angular.
+            <br> Please click on the images to view them in full.</p>
+    </div>
+
+    <!-- The four columns -->
+    <div class="row">
+        <div class="column">
+            <img src="../MyPortfolio/images/IMG_20200129_224127_072 (2).jpg" alt="Multimedia Artist - Profile Mockup" style="width:100%"
+                onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="../MyPortfolio/images/Mockup8b (2).jpg" alt="Fitness Trainer - Profile Mockup" style="width:100%"
+                onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="../MyPortfolio/images/Mockup9c (2).jpg" alt="Beauty Professional - Profile Mockup" style="width:100%"
+                onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="../MyPortfolio/images/Mockup10b.jpg" alt="Senior Fashion Editor - Profile Mockup" style="width:100%"
+                onclick="myFunction(this);">
+        </div>
+    </div>
+    <br>
+     <!-- The four columns -->
+     <div class="row">
+        
+        <div class="column">
+            <img src="../MyPortfolio/images/1.jpg" alt="A water rafting website." style="width:100%"
+                onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="../MyPortfolio/images/RunTheRaftMockups - Copy-01.jpg" alt="Mockups for a water rafting website." style="width:100%"
+                onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="../MyPortfolio/images/WD.jpg" alt="A donation website." style="width:100%"
+                onclick="myFunction(this);">
+        </div>
+        <div class="column">
+            <img src="../MyPortfolio/images/deadlyislanddevicemockup.jpg" alt="Mockups for a game website" style="width:100%"
+                onclick="myFunction(this);">
+        </div>
+        </div>
+        <br>
+    
+
+    <br>
+    <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+    </div>
+
+    <!--open image-->
+    <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
